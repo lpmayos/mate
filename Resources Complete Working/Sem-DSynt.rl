@@ -199,6 +199,36 @@ rc:?Xr{
 
   ]
 ]
+Sem<=>DSynt transfer_future : transfer_attribute
+[
+  leftside = [
+?Sp {
+  sem = specifier
+  ?Xl {
+    1 -> ?Yl {
+      1 -> ?Zl
+    }
+  }
+}
+?Rh {
+  sem = rheme
+  main -> ?Zl
+}
+  ]
+  conditions = [
+?Xl.sem = FUTURE;
+  ]
+  rightside = [
+rc:?Zr {
+  <=> ?Zl
+  rc:finiteness = FIN
+  tense = FUT
+}
+  ]
+  correspondence = [
+
+  ]
+]
 Sem<=>DSynt LOCIN : transfer_node
 [
   leftside = [
