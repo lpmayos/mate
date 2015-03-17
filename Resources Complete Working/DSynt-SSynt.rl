@@ -259,9 +259,9 @@ DSynt<=>SSynt transfer_node_det-DEF : transfer_node
 rc:?Xr {
   <=> ?Xl
   det-> ?Det {
-    slex=lexicon::(der_1).lemma
-    spos=lexicon::(der_1).spos
-    dpos=lexicon::(der_1).dpos
+    slex=lexicon::(the).lemma
+    spos=lexicon::(the).spos
+    dpos=lexicon::(the).dpos
   }
 }
 rc:?S {
