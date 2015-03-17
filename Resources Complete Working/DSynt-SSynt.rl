@@ -309,6 +309,7 @@ DSynt<=>SSynt transfer_node_tense_FUT : transfer_node
   leftside = [
 ?Xl {
   tense=FUT
+  II -> ?Yl
 }
   ]
   conditions = [
@@ -327,8 +328,8 @@ lf::(?Xl.dlex).dpos;
   top=yes
   analyt_fut-> ?Xr {
     <=> ?Xl
-    slex=lexicon::(?Xl.dlex).lemma
-    spos=lexicon::(?Xl.dlex).spos
+    slex=lexicon::(lexicon::(?Yl.dlex).Oper1).lemma
+    spos=lexicon::(lexicon::(?Yl.dlex).Oper1).spos
     dpos=?Xl.dpos
     finiteness=PART
     bottom=yes
