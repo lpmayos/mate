@@ -288,9 +288,9 @@ DSynt<=>SSynt transfer_node_det-INDEF : transfer_node
 rc:?Xr {
   <=> ?Xl
   det-> ?Det {
-    slex=lexicon::(ein).lemma
-    spos=lexicon::(ein).spos
-    dpos=lexicon::(ein).dpos
+    slex=lexicon::(a).lemma
+    spos=lexicon::(a).spos
+    dpos=lexicon::(a).dpos
   }
 }
 rc:?S {
