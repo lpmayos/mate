@@ -184,11 +184,11 @@ Sem<=>DSynt transfer_attr_VOICE : transfer_attribute
 }
   ]
   conditions = [
-
+lf::(?Xr.dlex).dpos = V;
   ]
   rightside = [
 // the syntactic root is a finite active verb
-rc:?Xr{
+rc:?Xr {
   <=> ?Xl
   clause=main
   finiteness=FIN
