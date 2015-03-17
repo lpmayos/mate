@@ -352,6 +352,30 @@ Sem<=>DSynt disabled transfer_synt_root_rheme : transfer_node
 
   ]
 ]
+Sem<=>DSynt oper_locin : transfer_relation
+[
+  leftside = [
+?Xl {
+  sem = LOCATION
+  1 -> ?Yl
+  2 -> ?Zl
+}
+  ]
+  conditions = [
+not lexicon::(?Yr.dlex).lf = yes;
+  ]
+  rightside = [
+rc:?Yr {
+  <=> ?Yl
+  ATTR -> ?Or {
+    <=> ?Xl
+  }
+}
+  ]
+  correspondence = [
+
+  ]
+]
 /*A rule to transfer the meta node TIME*/
 Sem<=>DSynt disabled transfer_rel_TIME : transfer_relation
 [
