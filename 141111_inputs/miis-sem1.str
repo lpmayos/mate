@@ -1,0 +1,42 @@
+structure Sem S {
+  sentence:0{
+    bubble=yes sem=sentence
+    rheme:1{
+      bubble=yes sem=rheme
+      speech:2{
+        sem=speech
+        1-> president:3
+      }
+      our:4{
+        sem=our
+        1-> university:5
+      }
+      university:5{sem=university}
+      LOCATION:6{
+        sem=LOCATION
+        1-> speech:2
+        2-> university:5
+      }
+      main-> speech:2
+    }
+    theme:7{
+      bubble=yes sem=theme
+      president:3{sem=president}
+      main-> president:3
+    }
+    specifier:8{
+      bubble=yes sem=specifier
+      today:9{sem=today}
+      TIME:10{
+        sem=TIME
+        2-> today:9
+        1-> speech:2
+      }
+      FUTURE:11{
+        sem=FUTURE
+        1-> TIME:10
+      }
+      main-> TIME:10
+    }
+  }
+}
