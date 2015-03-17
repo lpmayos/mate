@@ -1,0 +1,151 @@
+lexicon {
+
+
+//---------------
+// TYPES
+//---------------
+
+_verb {
+  1=I
+  spos=verb
+  dpos=V
+  gp = {
+    I = {
+      rel=subj
+      case=NOM
+    }
+  }
+}
+
+_verb_trans_dir : _verb {
+  2=II
+  3=III
+  4=IV
+  gp = {
+    II = {
+      rel=dobj
+      case=ACC
+    }
+  }
+}
+
+_verb_trans_indir : _verb {
+  2=II
+  3=III
+  4=IV
+  gp = {
+    II = {
+      rel=iobj
+      case=DAT
+    }
+  }
+}
+
+_noun {
+  1=I
+  2=II
+  3=III
+  4=IV
+  spos=noun
+  dpos=N
+  person=3
+  number=SG
+  gp = {
+    I = {
+      rel=compos
+    }
+    II = {
+      rel=compos
+      invariant=yes
+    }
+  }
+}
+
+_pronoun : _noun {
+  spos=pronoun
+  det=NO
+}
+
+_adjective {
+  1=ATTR
+  spos=adjective
+  dpos=A
+}
+
+
+_adverb {
+  1=ATTR
+  spos=adverb
+  dpos=Adv
+  invariant=yes
+}
+
+_preposition : _adverb {
+  1=ATTR
+  2=II
+  spos=preposition
+  gp = {
+    II = {
+      rel=prepos
+    }
+  }
+}
+
+_determiner {
+  spos=determiner
+  dpos=A
+}
+
+
+//---------------
+// LEXICAL UNITS
+//---------------
+
+a : _determiner {
+  lemma= a
+}
+
+at : _preposition {
+  lemma=at
+}
+
+president : _noun {
+  lemma=president
+}
+
+our {
+  lemma=our
+  dpos=A
+  spos=adjective
+}
+
+
+today : _adverb {
+  lemma=today
+}
+
+give : _verb_trans_dir {
+  lemma=give
+  }
+
+speech : _noun {
+  lemma=speech
+  lf=yes
+  Oper1=give
+}
+the : _determiner {
+  lemma=the
+}
+
+university : _noun {
+  lemma=university
+}
+
+will {
+  lemma=will
+  spos=auxiliary
+  dpos=V
+}
+
+
+}

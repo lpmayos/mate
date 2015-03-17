@@ -1,0 +1,21 @@
+lf {
+
+Real1 {
+  1=I
+  2=II
+  dpos=V
+}
+
+Oper1 {
+  1=I
+  2=II
+  dpos=V
+}
+
+
+Locin {
+  1=ATTR
+  2=II
+  dpos=Adv
+}
+}

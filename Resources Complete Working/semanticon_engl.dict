@@ -1,0 +1,43 @@
+concepticon {
+
+today {
+  lex=today
+}
+
+president {
+  lex=president
+}
+
+speech {
+  lex=speech
+}
+
+university {
+  lex=university
+}
+
+our {
+  lex=our
+}
+
+//---------------
+// META NODES
+//---------------
+
+
+LOCATION {
+  lex=LOCATION
+  type=meta
+}
+
+TIME {
+  lex=TIME
+  type=meta
+}
+
+FUTURE {
+  lex=FUTURE
+  type=meta
+}
+
+}
