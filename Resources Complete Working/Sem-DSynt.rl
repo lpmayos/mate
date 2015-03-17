@@ -240,6 +240,10 @@ lexicon::(?Yr.dlex).Oper1;
     dlex=?L
   }
 }
+rc:?B {
+  rc:?Yr
+  ?Xr
+}
   ]
   correspondence = [
 
