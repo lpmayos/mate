@@ -319,9 +319,9 @@ not lf::(?Xl.dlex).dpos;
   rightside = [
 ?Ar {
   <=> ?Xl
-  slex=lexicon::(werden_2).lemma
-  spos=lexicon::(werden_2).spos
-  dpos=lexicon::(werden_2).dpos
+  slex=lexicon::(will).lemma
+  spos=lexicon::(will).spos
+  dpos=lexicon::(will).dpos
   tense=PRES
   finiteness=FIN
   top=yes
