@@ -111,6 +111,7 @@ at : _preposition {
 
 president : _noun {
   lemma=president
+  definiteness = DEF
 }
 
 our {
