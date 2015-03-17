@@ -314,7 +314,7 @@ DSynt<=>SSynt transfer_node_tense_FUT : transfer_node
   conditions = [
 not ?Xl.bubble;
 not ?Xl.aspect=PERF;
-not lf::(?Xl.dlex).dpos;
+lf::(?Xl.dlex).dpos;
   ]
   rightside = [
 ?Ar {
