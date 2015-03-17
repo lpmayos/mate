@@ -542,3 +542,25 @@ rc:?Tr {
 
   ]
 ]
+Sem<=>DSynt university_our : transfer_relation
+[
+  leftside = [
+?Xl {
+  1 -> ?Yl
+}
+  ]
+  conditions = [
+lexicon::(?Xr.dlex).spos = adjective;
+  ]
+  rightside = [
+rc:?Yr {
+  <=> ?Yl
+  ATTR -> rc:?Xr {
+    <=> ?Xl
+  }
+}
+  ]
+  correspondence = [
+
+  ]
+]
