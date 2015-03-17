@@ -147,7 +147,7 @@ rc:?Xr {
   ]
 ]
 /*Finite verbs with no established tense in the Sem Str are assigned "Present" by default.*/
-Sem<=>DSynt transfer_attr_TENSE_default : transfer_attribute
+Sem<=>DSynt disabled transfer_attr_TENSE_default : transfer_attribute
 [
   leftside = [
 ?Xl
