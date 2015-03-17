@@ -199,6 +199,28 @@ rc:?Xr{
 
   ]
 ]
+Sem<=>DSynt LOCIN : transfer_node
+[
+  leftside = [
+?Xl {
+  sem = LOCATION
+  1 -> ?Yl
+  2 -> ?Zl
+}
+  ]
+  conditions = [
+
+  ]
+  rightside = [
+?Xr {
+  <=> ?Xl
+  dlex = Locin
+}
+  ]
+  correspondence = [
+
+  ]
+]
 Sem<=>DSynt transfer_bubble_recopy : transfer_node
 [
   leftside = [
