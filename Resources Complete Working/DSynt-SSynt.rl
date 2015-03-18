@@ -341,6 +341,29 @@ lf::(?Xl.dlex).dpos;
 
   ]
 ]
+DSynt<=>SSynt transfer_rel_N_det : transfer_relation
+[
+  leftside = [
+?Xl {
+  dpos = N
+  ATTR -> ?Yl
+}
+  ]
+  conditions = [
+
+  ]
+  rightside = [
+rc:?Xr {
+  <=> ?Xl
+  det -> rc:?Yr {
+    <=> ?Yl
+  }
+}
+  ]
+  correspondence = [
+
+  ]
+]
 /*Transfers the relation ATTR below a verb (no mapping is provided in the lexicon).*/
 DSynt<=>SSynt transfer_rel_adverbial : transfer_relation
 [
