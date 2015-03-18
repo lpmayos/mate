@@ -467,6 +467,7 @@ DSynt<=>SSynt transfer_rel_lexicon_govPrep_no : transfer_relation
 [
   leftside = [
 ?Xl {
+  dlex = Oper1
   ?r-> ?Yl
 }
   ]
@@ -474,11 +475,11 @@ DSynt<=>SSynt transfer_rel_lexicon_govPrep_no : transfer_relation
 //there is a mapping in the lexicon
 lexicon::(?Xr.slex).(gp).(?r);
 //no preposition is required by the governor
-not lexicon::(?Xl.dlex).(gp).(?r).(prep);
+not lexicon::(?Xr.slex).(gp).(?r).(prep);
 //Only attaches the subject to the finite verb (see transfer_node_tense_FUT)
-//not (lexicon::(?Xl.dlex).(gp).(?r).(rel)=subj and ?Xr.bottom=yes);
+not (lexicon::(?Xr.slex).(gp).(?r).(rel)=subj and ?Xr.bottom=yes);
 //If the dependent is an auxiliated form, point to the top dep
-//not ?Yr.bottom=yes;
+not ?Yr.bottom=yes;
 //If the governor is auxiliated, only the bottom gov can be governor (except for subj)
 //not (?Xr.top=yes and not lexicon::(?Xl.dlex).(gp).(?r).(rel)=subj);
   ]
