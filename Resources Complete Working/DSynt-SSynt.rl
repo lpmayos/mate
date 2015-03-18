@@ -160,6 +160,36 @@ rc:?Yr {
 
   ]
 ]
+DSynt<=>SSynt locin : transfer_node
+[
+  leftside = [
+?Xl {
+  ATTR -> ?Yl {
+    dlex = Locin
+    II -> ?Zl
+  }
+}
+  ]
+  conditions = [
+not ?Xr.spos = auxiliary;
+  ]
+  rightside = [
+rc:?Xr {
+  <=> ?Xl
+  adv -> ?Prep {
+    slex = lexicon::(at).lemma
+    spos = lexicon::(at).spos
+    dpos = lexicon::(at).dpos
+    prepos -> rc:?Zr {
+      <=> ?Zl
+    }
+  }
+}
+  ]
+  correspondence = [
+
+  ]
+]
 /*Transfers bubbles.*/
 DSynt<=>SSynt transfer_bubble_F : transfer_node
 [
