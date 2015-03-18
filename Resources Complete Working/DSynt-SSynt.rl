@@ -373,6 +373,28 @@ lf::(?Xl.dlex).dpos;
 
   ]
 ]
+DSynt<=>SSynt transfer_APPEND_to_adjunct : transfer_relation
+[
+  leftside = [
+?Xl {
+  APPEND -> ?Yl
+}
+  ]
+  conditions = [
+not ?Xr.bottom = yes;
+  ]
+  rightside = [
+rc:?Xr {
+  <=> ?Xl
+  adjunct -> rc:?Yr {
+    <=> ?Yl
+  }
+}
+  ]
+  correspondence = [
+
+  ]
+]
 DSynt<=>SSynt transfer_rel_N_det : transfer_relation
 [
   leftside = [
