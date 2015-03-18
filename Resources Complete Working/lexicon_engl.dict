@@ -114,10 +114,8 @@ president : _noun {
   definiteness = DEF
 }
 
-our {
+our : _determiner{
   lemma=our
-  dpos=A
-  spos=adjective
 }
 
 
@@ -142,7 +140,7 @@ university : _noun {
   lemma=university
 }
 
-will {
+will : _verb {
   lemma=will
   spos=auxiliary
   dpos=V
