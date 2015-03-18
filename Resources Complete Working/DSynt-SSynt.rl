@@ -95,7 +95,7 @@ DSynt<=>SSynt transfer_attributes : transfer_attributes
 ?Xl
   ]
   conditions = [
-not ?Xl COREF-> ?N;	//in this case some attributes are taken from the coreferring element
+not ?Xl COREF-> ?N; //in this case some attributes are taken from the coreferring element
 not ?Xl.tense=FUT;
   ]
   rightside = [
@@ -160,7 +160,7 @@ rc:?Yr {
 
   ]
 ]
-DSynt<=>SSynt locin : transfer_node
+DSynt<=>SSynt LocIn : transfer_node
 [
   leftside = [
 ?Xl {
@@ -175,14 +175,15 @@ not ?Xr.spos = auxiliary;
   ]
   rightside = [
 rc:?Xr {
-  <=> ?Xl
-  adv -> ?Prep {
-    slex = lexicon::(at).lemma
-    spos = lexicon::(at).spos
-    dpos = lexicon::(at).dpos
+  <=>?Xl
+  adv-> ?Prep {
+    <=>?Yl
+    slex=lexicon::(at).lemma
+    spos=lexicon::(at).spos
+    dpos=lexicon::(at).dpos
     prepos -> rc:?Zr {
-      <=> ?Zl
-    }
+      <=>?Zl
+    } 
   }
 }
   ]
@@ -250,7 +251,7 @@ DSynt<=>SSynt disabled transfer_node_aspect_PERF : transfer_node
   conditions = [
 not ?Xl.bubble;
 not ?Xl.tense=FUT;
-not lf::(?Xl.dlex).dpos;
+lf::(?Xl.dlex).dpos;
   ]
   rightside = [
 ?Ar {
@@ -313,7 +314,7 @@ DSynt<=>SSynt transfer_node_det-INDEF : transfer_node
   ]
   conditions = [
 ?Xl.definiteness=INDEF;
-not ?Xl ATTR-> ?Yl; 
+not ?Xl ATTR-> ?Yl;
   ]
   rightside = [
 rc:?Xr {
@@ -334,7 +335,8 @@ rc:?S {
 
   ]
 ]
-/*Transfers nodes which are not values of lexical functions.*/
+/*Transfers nodes which are not values of lexical functions.
+lexicon::(?Yl.dlex).Oper1*/
 DSynt<=>SSynt transfer_node_tense_FUT : transfer_node
 [
   leftside = [
@@ -387,7 +389,7 @@ rc:?Xr {
   <=> ?Xl
   det -> rc:?Yr {
     <=> ?Yl
-  }
+  } 
 }
   ]
   correspondence = [
@@ -453,7 +455,7 @@ rc:?Xr {
 }
 rc:?S {
   rc:bubble=yes
-  rc:?Xr rc:?Yr ?Zr 	//puts Z in the bubble
+  rc:?Xr rc:?Yr ?Zr   //puts Z in the bubble
 }
   ]
   correspondence = [
@@ -470,20 +472,20 @@ DSynt<=>SSynt transfer_rel_lexicon_govPrep_no : transfer_relation
   ]
   conditions = [
 //there is a mapping in the lexicon
-lexicon::(?Xl.dlex).(gp).(?r);
+lexicon::(?Xr.slex).(gp).(?r);
 //no preposition is required by the governor
 not lexicon::(?Xl.dlex).(gp).(?r).(prep);
 //Only attaches the subject to the finite verb (see transfer_node_tense_FUT)
-not (lexicon::(?Xl.dlex).(gp).(?r).(rel)=subj and ?Xr.bottom=yes);
+//not (lexicon::(?Xl.dlex).(gp).(?r).(rel)=subj and ?Xr.bottom=yes);
 //If the dependent is an auxiliated form, point to the top dep
-not ?Yr.bottom=yes;
+//not ?Yr.bottom=yes;
 //If the governor is auxiliated, only the bottom gov can be governor (except for subj)
-not (?Xr.top=yes and not lexicon::(?Xl.dlex).(gp).(?r).(rel)=subj);
+//not (?Xr.top=yes and not lexicon::(?Xl.dlex).(gp).(?r).(rel)=subj);
   ]
   rightside = [
 rc:?Xr {
   <=> ?Xl
-  lexicon::(?Xl.dlex).(gp).(?r).(rel)-> rc:?Yr {
+  lexicon::(?Xr.slex).(gp).(?r).(rel)-> rc:?Yr {
       <=> ?Yl
   }
 }
