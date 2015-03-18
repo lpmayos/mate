@@ -283,6 +283,7 @@ DSynt<=>SSynt transfer_node_det-INDEF : transfer_node
   ]
   conditions = [
 ?Xl.definiteness=INDEF;
+not ?Xl ATTR-> ?Yl; 
   ]
   rightside = [
 rc:?Xr {
