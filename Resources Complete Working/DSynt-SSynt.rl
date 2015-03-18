@@ -178,9 +178,9 @@ rc:?Xr {
   <=>?Xl
   adv-> ?Prep {
     <=>?Yl
-    slex=lexicon::(at).lemma
-    spos=lexicon::(at).spos
-    dpos=lexicon::(at).dpos
+    slex=lexicon::(lexicon::(?Zl.dlex).Locin).lemma
+    spos=lexicon::(lexicon::(?Zl.dlex).Locin).spos
+    dpos=lexicon::(lexicon::(?Zl.dlex).Locin).dpos
     prepos -> rc:?Zr {
       <=>?Zl
     } 

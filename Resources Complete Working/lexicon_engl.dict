@@ -138,6 +138,7 @@ the : _determiner {
 
 university : _noun {
   lemma=university
+  Locin = at
 }
 
 will : _verb {
