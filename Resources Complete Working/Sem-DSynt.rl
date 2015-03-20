@@ -604,7 +604,7 @@ Sem<=>DSynt university_our : transfer_relation
 }
   ]
   conditions = [
-lexicon::(?Xr.dlex).spos = adjective;
+lexicon::(?Xr.dlex).spos = determiner;
   ]
   rightside = [
 rc:?Yr {
